@@ -1,0 +1,89 @@
+@import './css-resets','./arrow';
+/* Custom style here */
+
+$primary: rgb(61, 170, 224);
+$secondary:  #4c3d6d;
+
+.primary {
+color: $primary !important;
+}
+.secondary {
+   color: $secondary !important;
+}
+
+body section:nth-child(1), body section:nth-child(2) {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  background-repeat: repeat, no-repeat;
+
+}
+
+body section:nth-child(1) {
+  background: url(./fleck-white.png), $primary;
+}
+
+body section:nth-child(2) {
+  background: url(./fleck-white.png), $secondary;
+}
+
+h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 900;
+  letter-spacing: -0.0416666667rem;
+  line-height: 1;
+  margin: 0 0 0.6666666667rem;
+  padding-top: 0.6666666667rem;
+  font-size: 1.5rem;
+
+}
+h2,
+p {
+  font-size: 1rem;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+
