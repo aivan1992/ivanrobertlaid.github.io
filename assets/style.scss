@@ -81,6 +81,10 @@ h2 {
 p {
   font-size: 1rem;
 }
+ .freelancericon {
+  height: 20px;
+  line-height: 20px;
+}
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
@@ -90,6 +94,10 @@ p {
   h2 {
     font-size: 1.2rem;
   }
+  .freelancericon {
+  height: 30px;
+  line-height: 30px;
+}
 }
 
 /*Medium devices (tablets, 768px and up)*/
@@ -100,6 +108,10 @@ p {
   h2 {
     font-size: 1.3rem;
   }
+    .freelancericon {
+  height: 35px;
+  line-height: 35px;
+}
 }
 
 /*Large devices (desktops, 992px and up)*/
@@ -110,6 +122,10 @@ p {
   h2 {
     font-size: 1.5rem;
   }
+      .freelancericon {
+  height: 40px;
+  line-height: 40px;
+}
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
@@ -120,6 +136,11 @@ p {
   h2 {
     font-size: 2rem;
   }
+    .freelancericon {
+  height: 50px;
+  line-height: 50px;
+
+}
 }
 
 
@@ -128,3 +149,4 @@ p {
   content: "\00B7";
   padding: 0 4px 0 0;
 }
+
