@@ -37,6 +37,9 @@ body section:nth-child(2) {
   padding: 30px 5px;
   .aboutme {
     li {
+      background: rgba(61, 170, 224, .1);
+      border-radius: 5px;
+      padding: 15px 10px;
       color: white;
       margin-top: 20px;
       line-height: 1.4em;
@@ -45,8 +48,8 @@ body section:nth-child(2) {
        color: $primary; 
        font-weight: bold; 
        display: inline-block;
-       width: 1em;
-       margin-left: -1em;
+       width: 1.5em;
+       margin-left: -1.5em;
      }
 
    }    
@@ -82,8 +85,8 @@ p {
   font-size: 1rem;
 }
  .freelancericon {
-  height: 20px;
-  line-height: 20px;
+  height: 25px;
+  line-height: 25px;
 }
 
 /*Small devices (landscape phones, 576px and up)*/
