@@ -178,20 +178,11 @@ body section:nth-child(2) {
   padding: 30px 5px;
 }
 body section:nth-child(2) .aboutme li {
-  background: rgba(61, 170, 224, 0.1);
   border-radius: 5px;
   padding: 15px 10px;
   color: white;
   margin-top: 20px;
   line-height: 1.4em;
-}
-body section:nth-child(2) .aboutme li:before {
-  content: "•";
-  color: #3daae0;
-  font-weight: bold;
-  display: inline-block;
-  width: 1.5em;
-  margin-left: -1.5em;
 }
 
 body section:nth-child(3) {
