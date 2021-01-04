@@ -26,7 +26,7 @@
    <div class="d-flex flex-row justify-content-center mt-4">
     <a href="https://www.facebook.com/aivan0221" target="_blank"><img src="./assets/facebook.png" class="img-fluid mx-2 freelancericon img-thumbnail p-0 border-0" alt="freelancer.com"></a>
     <a href="https://www.freelancer.com/u/ivanrobert1992" target="_blank"><img src="./assets/freelancer.png" class="img-fluid mx-2 freelancericon img-thumbnail" alt="freelancer.com"></a>
-    
+
  </div>
 </section>
 <section id="section2" class="position-relative">
@@ -45,7 +45,7 @@
    <div class="container w-100">
       <div class="row h-100 mt-5">
          <div class="col-md-6 col-12 com-sm-12 mx-auto">
-            <ul class="aboutme mx-3">
+            <ul class="aboutme card p-4 mb-5">
                <li> <h6>I'm proficient in creating custom scripts, debugging, database queries, API integration,  back-end.</h6></li>
                <li><h6> My best programming frameworks are <b>Laravel and Vue.js/Nuxt.js</b>.</h6></li>
                <li><h6> I do both Desktop and Web development. Laravel-Vue.js in Web, and C#.NET in desktop.</h6></li>
@@ -188,7 +188,7 @@
      months += d2.getMonth();
      return months <= 0 ? 0 : months;
   }
-  
+
   const  setDate = (d1, d2) => {
      var diff = monthDiff(d1, d2);
      return (
@@ -199,16 +199,16 @@
       diff
       );
   }
-  
+
   const monthDiffResult = setDate(
                new Date(2020, 9, 1), // Oct  2020
                new Date() 
                );
-  
+
   document.querySelector('#datenow').innerHTML = `${monthDiffResult} ${monthDiffResult > 0 ? 'months' : 'month'}`; 
 });
-   
-   
+
+
 </script>
 </body>
 </html>
