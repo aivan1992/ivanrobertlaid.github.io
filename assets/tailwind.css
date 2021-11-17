@@ -1,0 +1,123 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer utilities {
+  h1 {
+    @apply 2xl:text-5xl xl:text-5xl lg:text-4xl md:text-3xl text-3xl;
+  }
+  h2 {
+    @apply 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-2xl text-2xl;
+  }
+  h3 {
+    @apply 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl text-xl;
+  }
+  h4 {
+    @apply 2xl:text-xl xl:text-xl lg:text-xl md:text-lg text-base;
+  }
+  h5 {
+    @apply 2xl:text-lg xl:text-lg lg:text-lg md:text-base text-base;
+  }
+  h6,
+  p {
+    @apply 2xl:text-base xl:text-base lg:text-base md:text-sm text-sm;
+  }
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+#first {
+  background: url(./fleck-white.png), #208be8;
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#second {
+  background: url(./fleck-white.png), #4f46e5;
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#third {
+  background: url(./fleck-white.png), #047857;
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.arrowtop {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  animation: float 4.5s ease-in-out infinite;
+}
+
+.arrow {
+  border: solid white;
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  border-width: 0 7px 7px 0;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/*typewritter effect */
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.10em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+
+/*float animation*/
+
+@keyframes float {
+   0% {
+      transform: translatey(0px);
+   }
+   50% {
+      transform: translatey(-15px);
+   }
+   100% {
+      transform: translatey(0px);
+   }
+}
