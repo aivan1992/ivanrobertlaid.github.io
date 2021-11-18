@@ -32103,14 +32103,6 @@ h6, p {
   background-position: center;
 }
 
-.arrowtop {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  -webkit-animation: float 4.5s ease-in-out infinite;
-          animation: float 4.5s ease-in-out infinite;
-}
-
 .arrow {
   border: solid white;
   width: 15px;
@@ -32217,6 +32209,33 @@ h6, p {
   100% {
     transform: translatey(0px);
   }
+}
+
+.arrow-container {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  -webkit-animation: float 4.5s ease-in-out infinite;
+          animation: float 4.5s ease-in-out infinite;
+}
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+  .arrow-container {
+    right: 17px;
+    bottom: 17px;
+  }
+}
+
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1536px) {
 }
 
 @media (min-width: 640px) {
@@ -188358,3 +188377,5 @@ h6, p {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
+
