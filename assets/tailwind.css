@@ -28,21 +28,21 @@
   font-family: "Poppins", sans-serif;
 }
 
-#first {
+#main {
   background: url(./fleck-white.png), #208be8;
   background-repeat: repeat, no-repeat;
   background-attachment: fixed;
   background-position: center;
 }
 
-#second {
+#about-me {
   background: url(./fleck-white.png), #4f46e5;
   background-repeat: repeat, no-repeat;
   background-attachment: fixed;
   background-position: center;
 }
 
-#third {
+#experience {
   background: url(./fleck-white.png), #047857;
   background-repeat: repeat, no-repeat;
   background-attachment: fixed;
