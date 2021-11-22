@@ -32082,6 +32082,10 @@ h6, p {
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #main {
   background: url(./fleck-white.png), #208be8;
   background-repeat: repeat, no-repeat;
