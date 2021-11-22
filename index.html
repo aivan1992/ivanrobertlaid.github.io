@@ -16,6 +16,7 @@
   </head>
   <body>
     <section
+    onscroll="setThemeColor1"
       id="main"
       class="
         min-h-screen
@@ -69,6 +70,7 @@
     </section>
 
     <section
+    onscroll="setThemeColor2"
       id="about-me"
       class="
         min-h-screen
@@ -236,6 +238,7 @@
     </section>
 
     <section
+      onscroll="setThemeColor3"
       id="experience"
       class="min-h-screen flex items-center w-full flex-col relative px-8 pb-32"
     >
@@ -414,6 +417,18 @@ Dumaguete City, Philippines (Office-based)
       </a>
     </section>
 
+<script>
+ function setThemeColor1() {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#4F46E5');
+ }
 
+  function setThemeColor2() {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#4F46E5');
+ }
+
+  function setThemeColor3() {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#047857');
+ }
+</script>
   </body>
 </html>
