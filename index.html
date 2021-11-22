@@ -376,8 +376,10 @@
 
          if(!theme) {
              theme = document.createElement('meta');
-             theme.name= "theme-color";
+             theme.setAttribute('name', 'theme-color');
+             theme.setAttribute('content', '');
          }
+
 
          const getThemeColor = theme.getAttribute('content');
          const vh = window.innerHeight;
