@@ -16,7 +16,7 @@
   </head>
   <body>
     <section
-    onscroll="setThemeColor1"
+    data-theme-color="#208be8"
       id="main"
       class="
         min-h-screen
@@ -70,7 +70,7 @@
     </section>
 
     <section
-    onscroll="setThemeColor2"
+        data-theme-color="#4F46E5"
       id="about-me"
       class="
         min-h-screen
@@ -238,7 +238,7 @@
     </section>
 
     <section
-      onscroll="setThemeColor3"
+             data-theme-color="#047857"
       id="experience"
       class="min-h-screen flex items-center w-full flex-col relative px-8 pb-32"
     >
@@ -418,17 +418,28 @@ Dumaguete City, Philippines (Office-based)
     </section>
 
 <script>
- function setThemeColor1() {
-    document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#4F46E5');
- }
 
-  function setThemeColor2() {
-    document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#4F46E5');
- }
+ let theme = document.querySelector('meta[name="theme-color"]');
+  let getThemeColor = theme.getAttribute('content');
+  let sectionElem = document.getElementsByTagName('section');
+  let sectionHeight = sectionElem[0].clientHeight;
+  let sectionLength = sectionElem.length;
 
-  function setThemeColor3() {
-    document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#047857');
- }
+// set color on load
+window.onload = () => {
+  document.body.style.backgroundColor = theme.getAttribute('content');
+}
+
+// set color on 'scroll' event
+window.addEventListener('scroll', (e) => {
+  let offset = window.pageYOffset;
+  let  sectionIndex = parseInt(offset, "10") % sectionLength;
+  let  sectionColor = document.getElementsByTagName('section')[sectionIndex].getAttribute('data-theme-color');
+   let setSectionColor = theme.setAttribute('content', sectionColor);
+
+  document.querySelectorAll('section')[sectionIndex].style.backgroundColor = theme.getAttribute('content');
+});
+
 </script>
   </body>
 </html>
