@@ -6,7 +6,6 @@
       <title>Ivan Robert Laid</title>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <meta name="theme-color" content="#208be8" />
       <link
          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
          rel="stylesheet"
@@ -388,10 +387,13 @@
          const aboutmeHeight = (aboutme.clientHeight)+window.innerHeight;
          const experienceHeight = experience.clientHeight+window.innerHeight;
          
-         window.addEventListener('scroll', (e) => {
-           let offset = window.pageYOffset;
+        
+
+          function setColor() {
+               let offset = window.pageYOffset;
          
            if(offset <= mainHeight) {
+            console.log(mainColor === getThemeColor)
              if(getThemeColor !== mainColor) {
                theme.setAttribute('content', mainColor);
              }
@@ -404,7 +406,14 @@
                    theme.setAttribute('content', experienceColor);
                  }
            }
-         
+          }
+
+           window.document.onload = function(e){ 
+              setColor()
+          }
+
+         window.addEventListener('scroll', (e) => {
+              setColor();
          });
          
       </script>
