@@ -16,9 +16,10 @@
   </head>
   <body>
     <section
-    data-theme-color="#208be8"
+      data-theme-color="#208be8"
       id="main"
       class="
+      section
         min-h-screen
         flex
         justify-center
@@ -73,6 +74,7 @@
         data-theme-color="#4F46E5"
       id="about-me"
       class="
+      section
         min-h-screen
         flex
         items-center
@@ -238,9 +240,9 @@
     </section>
 
     <section
-             data-theme-color="#047857"
+      data-theme-color="#047857"
       id="experience"
-      class="min-h-screen flex items-center w-full flex-col relative px-8 pb-32"
+      class="min-h-screen section flex items-center w-full flex-col relative px-8 pb-32"
     >
       <h2 class="pt-20 font-bold text-gray-200 tracking-wider">EXPERIENCE</h2>
       <div
@@ -419,9 +421,9 @@ Dumaguete City, Philippines (Office-based)
 
 <script>
 
- let theme = document.querySelector('meta[name="theme-color"]');
+  let theme = document.querySelector('meta[name="theme-color"]');
   let getThemeColor = theme.getAttribute('content');
-  let sectionElem = document.getElementsByTagName('section');
+  let sectionElem = document.querySelectorAll('section.section');
   let sectionHeight = sectionElem[0].clientHeight;
   let sectionLength = sectionElem.length;
 
@@ -433,11 +435,10 @@ window.onload = () => {
 // set color on 'scroll' event
 window.addEventListener('scroll', (e) => {
   let offset = window.pageYOffset;
-  let  sectionIndex = parseInt(offset, "10") % sectionLength;
-  let  sectionColor = document.getElementsByTagName('section')[sectionIndex].getAttribute('data-theme-color');
-   let setSectionColor = theme.setAttribute('content', sectionColor);
-
-  document.querySelectorAll('section')[sectionIndex].style.backgroundColor = theme.getAttribute('content');
+  let sectionIndex = parseInt(offset, "10") % sectionLength;
+  let sectionColor = document.querySelectorAll('section.section')[sectionIndex].getAttribute('data-theme-color');
+  let setSectionColor = theme.setAttribute('content', sectionColor);
+  document.querySelectorAll('section.section')[sectionIndex].style.backgroundColor = theme.getAttribute('content');
 });
 
 </script>
