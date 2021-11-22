@@ -4,7 +4,6 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Ivan Robert Laid</title>
-      <meta name="theme-color" content="">
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -373,7 +372,13 @@
          </a>
       </section>
       <script>
-         const theme = document.querySelector('meta[name="theme-color"]');
+         let theme = document.querySelector('meta[name="theme-color"]');
+
+         if(!theme) {
+             theme = document.createElement('meta');
+             theme.name= "theme-color";
+         }
+
          const getThemeColor = theme.getAttribute('content');
          const vh = window.innerHeight;
          
@@ -389,7 +394,6 @@
          const aboutmeHeight = aboutme.clientHeight+vh;
          const experienceHeight = experience.clientHeight+vh;
          
-        
 
           function setColor() {
            let offset = window.pageYOffset;
