@@ -421,24 +421,39 @@ Dumaguete City, Philippines (Office-based)
 
 <script>
 
-  let theme = document.querySelector('meta[name="theme-color"]');
-  let getThemeColor = theme.getAttribute('content');
-  let sectionElem = document.querySelectorAll('section.section');
-  let sectionHeight = sectionElem[0].clientHeight;
-  let sectionLength = sectionElem.length;
+let theme = document.querySelector('meta[name="theme-color"]');
+let getThemeColor = theme.getAttribute('content');
 
-// set color on load
-window.onload = () => {
-  document.body.style.backgroundColor = theme.getAttribute('content');
-}
+const main = document.getElementById('main');
+const aboutme = document.getElementById('about-me');
+const experience = document.getElementById('experience');
 
-// set color on 'scroll' event
+const mainColor =   main.getAttribute('data-theme-color');
+const aboutmeColor = aboutme.getAttribute('data-theme-color');
+const experienceColor = experience.getAttribute('data-theme-color');
+
+const mainHeight = main.clientHeight;
+const aboutmeHeight = aboutme.clientHeight;
+const experienceHeight = experience.clientHeight;
+
+
 window.addEventListener('scroll', (e) => {
   let offset = window.pageYOffset;
-  let sectionIndex = parseInt(offset, "10") % sectionLength;
-  let sectionColor = document.querySelectorAll('section.section')[sectionIndex].getAttribute('data-theme-color');
-  let setSectionColor = theme.setAttribute('content', sectionColor);
-  document.querySelectorAll('section.section')[sectionIndex].style.backgroundColor = theme.getAttribute('content');
+
+  if(offset <= mainHeight) {
+    if(getThemeColor !== mainColor) {
+      theme.setAttribute('content', mainColor);
+    }
+  } else if(offset <= aboutmeHeight) {
+     if(getThemeColor !== aboutme) {
+          theme.setAttribute('content', aboutme);
+        }
+  } else if(offset <= experienceHeight) {
+         if(getThemeColor !== experience) {
+          theme.setAttribute('content', experience);
+        }
+  }
+
 });
 
 </script>
